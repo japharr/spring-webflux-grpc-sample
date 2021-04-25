@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package driver;
+
+option java_package = "com.japharr.driver";
+option java_multiple_files = true;
+
+message Driver {
+  int64 id = 1;
+  string name = 2;
+}
+
+service DriverService {
+  // get driver by driverId
+  rpc getDriverById(Driver) returns (Driver) {}
+}

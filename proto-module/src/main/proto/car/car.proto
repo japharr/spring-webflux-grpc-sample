@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package car;
+
+option java_package = "com.japharr.car";
+option java_multiple_files = true;
+
+message Car {
+  int64 id = 1;
+  string name = 2;
+  fixed64 releaseDate = 3;
+}
+
+service CarService {
+  // get car by carId
+  rpc getCarById(Car) returns (Car) {}
+
+  // get driver's by driverId
+  rpc getCarsByDriverId(Car) returns (stream Car) {}
+}
