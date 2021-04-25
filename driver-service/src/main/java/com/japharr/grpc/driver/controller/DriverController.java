@@ -1,6 +1,7 @@
 package com.japharr.grpc.driver.controller;
 
 import com.japharr.grpc.driver.dto.CarDto;
+import com.japharr.grpc.driver.dto.DriverDto;
 import com.japharr.grpc.driver.entity.Driver;
 import com.japharr.grpc.driver.repository.DriverRepository;
 import com.japharr.grpc.driver.service.DriverService;
@@ -12,34 +13,32 @@ import reactor.core.publisher.Mono;
 
 @RestController
 public class DriverController {
-    private final DriverRepository driverRepository;
     private final DriverService driverService;
 
-    public DriverController(DriverRepository driverRepository, DriverService driverService) {
-        this.driverRepository = driverRepository;
+    public DriverController(DriverService driverService) {
         this.driverService = driverService;
     }
 
     @PostMapping("/drivers")
     @ResponseStatus(HttpStatus.CREATED)
-    public Mono<Driver> addDriver(@RequestBody Driver car) {
-        return driverRepository.save(car);
+    public Mono<DriverDto> addDriver(@RequestBody Driver car) {
+        return driverService.addDriver(car);
     }
 
     @GetMapping("/drivers")
-    public Flux<Driver> getDrivers() {
-        return driverRepository.findAll();
+    public Flux<DriverDto> getDrivers() {
+        return driverService.getDrivers();
     }
 
-    @GetMapping("/drivers/{id}")
-    public Mono<CarDto> getDrivers(@PathVariable("id") Long driverId) {
-        return driverService.getCars(driverId);
+    @GetMapping("/drivers/{id}/cars")
+    public Flux<CarDto> getDrivers(@PathVariable("id") Long driverId) {
+        return driverService.getDriversCarById(driverId);
     }
 
     @DeleteMapping("/drivers/{id}")
     public Mono<ResponseEntity<Void>> deleteDriver(@PathVariable("id") Long id) {
-        return driverRepository.findById(id)
-            .flatMap(car -> driverRepository.delete(car).then(Mono.just(new ResponseEntity<Void>(HttpStatus.OK))))
+        return driverService.deleteDriver(id)
+            .then(Mono.just(new ResponseEntity<Void>(HttpStatus.OK)))
             .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 }

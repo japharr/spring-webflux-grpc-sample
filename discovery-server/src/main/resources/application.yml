@@ -4,6 +4,8 @@ server:
 eureka:
   instance:
     hostname: ${EUREKA_HOST:localhost}
+  server:
+    eviction-interval-timer-in-ms: 1000
   client:
     registerWithEureka: false
     fetchRegistry: false

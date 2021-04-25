@@ -5,6 +5,7 @@ import com.japharr.grpc.car.repository.CarRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import reactor.core.publisher.Flux;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 import java.time.Month;
 import java.util.Set;
 
+@EnableDiscoveryClient
 @EnableEurekaClient
 @SpringBootApplication
 public class CarServiceStarter {

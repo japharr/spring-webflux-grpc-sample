@@ -23,12 +23,12 @@
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-protobuf</artifactId>
-            <version>1.30.2</version>
+            <version>1.31.1</version>
         </dependency>
         <dependency>
             <groupId>io.grpc</groupId>
             <artifactId>grpc-stub</artifactId>
-            <version>${grpc.version}</version>
+            <version>1.31.1</version>
         </dependency>
         <dependency>
             <groupId>com.salesforce.servicelibs</groupId>

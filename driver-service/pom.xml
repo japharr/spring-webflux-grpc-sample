@@ -38,13 +38,7 @@
 		<dependency>
 			<groupId>net.devh</groupId>
 			<artifactId>grpc-spring-boot-starter</artifactId>
-			<version>2.9.0.RELEASE</version>
-			<exclusions>
-				<exclusion>
-					<groupId>io.grpc</groupId>
-					<artifactId>grpc-netty-shaded</artifactId>
-				</exclusion>
-			</exclusions>
+			<version>2.11.0.RELEASE</version>
 		</dependency>
 
 		<dependency>

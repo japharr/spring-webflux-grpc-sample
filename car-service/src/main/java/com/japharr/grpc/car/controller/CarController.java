@@ -20,31 +20,31 @@ public class CarController {
         this.carService = carService;
     }
 
-//    @PostMapping("/cars")
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public Mono<CarDto> addCar(@RequestBody Car car) {
-//        return carService.addCar(car);
-//    }
-//
-//    @GetMapping("/cars")
-//    public Flux<CarDto> getCars() {
-//        return carService.findAllCars();
-//    }
-//
-//    @GetMapping("/cars/{id}")
-//    public Mono<CarDto> findCarById(@PathVariable("id") Long id) {
-//        return carService.findCarById(id);
-//    }
+    @PostMapping("/cars")
+    @ResponseStatus(HttpStatus.CREATED)
+    public Mono<CarDto> addCar(@RequestBody Car car) {
+        return carService.addCar(car);
+    }
+
+    @GetMapping("/cars")
+    public Flux<CarDto> getCars() {
+        return carService.findAllCars();
+    }
+
+    @GetMapping("/cars/{id}")
+    public Mono<CarDto> findCarById(@PathVariable("id") Long id) {
+        return carService.findCarById(id);
+    }
 
     @GetMapping("/cars/{id}/drivers/{driverId}")
     public Mono<DriverDto> findCarById(@PathVariable("id") Long id, @PathVariable("driverId") Long driverId) {
         return carService.findDriverById(driverId);
     }
 
-//    @DeleteMapping("/cars/{id}")
-//    public Mono<ResponseEntity<Void>> deleteCar(@PathVariable("id") Long id) {
-//        return carService.deleteCarById(id)
-//            .then(Mono.just(new ResponseEntity<Void>(HttpStatus.OK)))
-//            .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-//    }
+    @DeleteMapping("/cars/{id}")
+    public Mono<ResponseEntity<Void>> deleteCar(@PathVariable("id") Long id) {
+        return carService.deleteCarById(id)
+            .then(Mono.just(new ResponseEntity<Void>(HttpStatus.OK)))
+            .defaultIfEmpty(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
 }
