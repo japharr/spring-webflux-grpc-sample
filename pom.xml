@@ -12,6 +12,7 @@
         <module>aggregator-service</module>
         <module>calculator-service</module>
         <module>discovery-server</module>
+        <module>car-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
