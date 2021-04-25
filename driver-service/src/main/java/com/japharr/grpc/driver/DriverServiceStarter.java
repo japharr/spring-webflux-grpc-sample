@@ -5,11 +5,13 @@ import com.japharr.grpc.driver.repository.DriverRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import reactor.core.publisher.Flux;
 
 import java.util.Set;
 
+@EnableEurekaClient
 @SpringBootApplication
 public class DriverServiceStarter {
 

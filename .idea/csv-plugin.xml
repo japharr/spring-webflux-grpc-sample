@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/car-service/pom.xml">
+          <value>
+            <Attribute>
+              <option name="separator" value="&#9;" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/car-service/src/main/java/com/japharr/grpc/car/entity/Car.java">
           <value>
             <Attribute>
@@ -17,7 +24,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/car-service/src/main/java/com/japharr/grpc/car/service/CarGrpcServiceImpl.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/controller/DriverController.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/dto/CarDto.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/entity/CarDto.java">
           <value>
             <Attribute>
               <option name="separator" value=";" />
@@ -35,6 +63,27 @@
           <value>
             <Attribute>
               <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/service/DriverGrpcService.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/driver-service/src/main/resources/application.yml">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/proto-module/pom.xml">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
             </Attribute>
           </value>
         </entry>

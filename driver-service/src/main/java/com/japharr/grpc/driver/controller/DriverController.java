@@ -1,8 +1,9 @@
 package com.japharr.grpc.driver.controller;
 
+import com.japharr.grpc.driver.dto.CarDto;
 import com.japharr.grpc.driver.entity.Driver;
 import com.japharr.grpc.driver.repository.DriverRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.japharr.grpc.driver.service.DriverService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +13,11 @@ import reactor.core.publisher.Mono;
 @RestController
 public class DriverController {
     private final DriverRepository driverRepository;
+    private final DriverService driverService;
 
-    public DriverController(DriverRepository driverRepository) {
+    public DriverController(DriverRepository driverRepository, DriverService driverService) {
         this.driverRepository = driverRepository;
+        this.driverService = driverService;
     }
 
     @PostMapping("/drivers")
@@ -26,6 +29,11 @@ public class DriverController {
     @GetMapping("/drivers")
     public Flux<Driver> getDrivers() {
         return driverRepository.findAll();
+    }
+
+    @GetMapping("/drivers/{id}")
+    public Mono<CarDto> getDrivers(@PathVariable("id") Long driverId) {
+        return driverService.getCars(driverId);
     }
 
     @DeleteMapping("/drivers/{id}")

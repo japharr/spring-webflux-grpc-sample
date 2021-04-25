@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package utils;
+
+option java_package = "com.japharr.utils";
+option java_multiple_files = true;
+
+message Input {
+  int64 value = 1;
+}

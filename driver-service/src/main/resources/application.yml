@@ -9,9 +9,20 @@ spring:
 server:
   port: ${SERVER_PORT:8082}
 
+grpc:
+  server:
+    port: 9082
+
+  client:
+    car-service:
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext
+
 eureka:
   instance:
-    preferIpAddress: false
+    preferIpAddress: true
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
   client:
     healthcheck:
       enabled: true

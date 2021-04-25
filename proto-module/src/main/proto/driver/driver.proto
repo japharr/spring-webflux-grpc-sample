@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package driver;
 
+import "utils/input.proto";
+
 option java_package = "com.japharr.driver";
 option java_multiple_files = true;
 
@@ -12,5 +14,5 @@ message Driver {
 
 service DriverService {
   // get driver by driverId
-  rpc getDriverById(Driver) returns (Driver) {}
+  rpc getDriverById(utils.Input) returns (Driver) {}
 }

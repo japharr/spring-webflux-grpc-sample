@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package car;
 
+import "utils/input.proto";
+
 option java_package = "com.japharr.car";
 option java_multiple_files = true;
 
@@ -13,8 +15,8 @@ message Car {
 
 service CarService {
   // get car by carId
-  rpc getCarById(Car) returns (Car) {}
+  rpc getCarById(utils.Input) returns (Car) {}
 
   // get driver's by driverId
-  rpc getCarsByDriverId(Car) returns (stream Car) {}
+  rpc getCarsByDriverId(utils.Input) returns (stream Car) {}
 }
