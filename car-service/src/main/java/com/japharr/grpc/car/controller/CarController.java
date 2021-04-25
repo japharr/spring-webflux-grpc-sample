@@ -11,7 +11,6 @@ import reactor.core.publisher.Mono;
 
 @RestController
 public class CarController {
-    @Autowired
     private final CarRepository carRepository;
 
     public CarController(CarRepository carRepository) {

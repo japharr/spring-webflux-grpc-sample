@@ -1,27 +1,21 @@
-package com.japharr.grpc.car.entity;
+package com.japharr.grpc.driver.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDate;
 import java.util.Objects;
 
 @Document
-public class Car {
+public class Driver {
     @Id
     private Long id;
     private String name;
-    private Long driverId;
-    private LocalDate releaseDate;
 
-    public Car() {
-    }
+    public Driver() {}
 
-    public Car(Long id, String name, Long driverId, LocalDate releaseDate) {
+    public Driver(Long id, String name) {
         this.id = id;
         this.name = name;
-        this.driverId = driverId;
-        this.releaseDate = releaseDate;
     }
 
     public Long getId() {
@@ -40,28 +34,12 @@ public class Car {
         this.name = name;
     }
 
-    public Long getDriverId() {
-        return driverId;
-    }
-
-    public void setDriverId(Long driverId) {
-        this.driverId = driverId;
-    }
-
-    public LocalDate getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(LocalDate releaseDate) {
-        this.releaseDate = releaseDate;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Car car = (Car) o;
-        return id.equals(car.id);
+        Driver driver = (Driver) o;
+        return id.equals(driver.id);
     }
 
     @Override

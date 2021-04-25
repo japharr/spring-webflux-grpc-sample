@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/calculator-service/calculator-service.iml" filepath="$PROJECT_DIR$/calculator-service/calculator-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/car-service/car-service.iml" filepath="$PROJECT_DIR$/car-service/car-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/driver-service/driver-service.iml" filepath="$PROJECT_DIR$/driver-service/driver-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/proto-module/proto-module.iml" filepath="$PROJECT_DIR$/proto-module/proto-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-grpc.iml" filepath="$PROJECT_DIR$/spring-grpc.iml" />
     </modules>

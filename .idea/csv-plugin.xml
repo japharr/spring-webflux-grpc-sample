@@ -17,6 +17,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/controller/DriverController.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/entity/Driver.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/driver-service/src/main/java/com/japharr/grpc/driver/repository/DriverRepository.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

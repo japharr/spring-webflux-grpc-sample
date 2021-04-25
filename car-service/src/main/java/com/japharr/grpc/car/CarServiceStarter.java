@@ -12,14 +12,13 @@ import reactor.core.publisher.Flux;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.Set;
-import java.util.UUID;
 
 @EnableEurekaClient
 @SpringBootApplication
-public class CarService {
+public class CarServiceStarter {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CarService.class, args);
+		SpringApplication.run(CarServiceStarter.class, args);
 	}
 
 	@Bean
