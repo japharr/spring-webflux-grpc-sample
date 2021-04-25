@@ -11,6 +11,7 @@
         <module>proto-module</module>
         <module>aggregator-service</module>
         <module>calculator-service</module>
+        <module>discovery-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

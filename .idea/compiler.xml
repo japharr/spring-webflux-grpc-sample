@@ -7,13 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="proto-module" />
-        <module name="aggregator-service" />
         <module name="calculator-service" />
+        <module name="discovery-server" />
+        <module name="aggregator-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aggregator-service" target="11" />
       <module name="calculator-service" target="11" />
+      <module name="discovery-server" target="11" />
       <module name="proto-module" target="11" />
       <module name="spring-grpc" target="11" />
     </bytecodeTargetLevel>
@@ -22,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="aggregator-service" options="-parameters" />
       <module name="calculator-service" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
       <module name="proto-module" options="-parameters" />
     </option>
   </component>
