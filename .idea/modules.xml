@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/aggregator-service/aggregator-service.iml" filepath="$PROJECT_DIR$/aggregator-service/aggregator-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/calculator-service/calculator-service.iml" filepath="$PROJECT_DIR$/calculator-service/calculator-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/car-service/car-service.iml" filepath="$PROJECT_DIR$/car-service/car-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/discovery-server/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-server/discovery-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/driver-service/driver-service.iml" filepath="$PROJECT_DIR$/driver-service/driver-service.iml" />
